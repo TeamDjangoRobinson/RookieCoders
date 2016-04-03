@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Restaurant Tip Calculator</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="Welcome">Welcome! You are at :</string>
+    <string name="RestaurantName">Bottles n Chimneys</string>
+    <string name="BillAmountLabel">Enter your Bill Amount</string>
+    <string name="TipRate">How much tip do you wish to pay?</string>
+    <string name="TotalBillLabel">Your Total Bill Amount is:</string>
+    <string name="SplitLabel">Splitting this amount equally among:</string>
+    <string name="PerHeadLabel">Amount to be Paid Per Head:</string>
+    <string name="RoundButton">Round it?</string>
+    <string name="ShareLabel">Your final share is : </string>
+    <string name="TipAmountLabel">Your tip amount is :</string>
+    <string name="Rate_1_Button">15%</string>
+    <string name="Rate_2_Button">18%</string>
+    <string name="Rate_3_Button">20%</string>
+
+</resources>
