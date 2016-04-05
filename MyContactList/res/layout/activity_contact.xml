@@ -79,12 +79,12 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/toolbar"
         android:focusableInTouchMode="false"
-        android:layout_above="@+id/navbar" >
+        android:layout_above="@+id/navbar" 
+        android:background="@color/dataentry_background" >
         
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" 
-            android:background="@color/dataentry_background">
+            android:layout_height="match_parent" >
             
             
 
