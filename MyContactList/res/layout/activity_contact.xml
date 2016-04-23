@@ -2,8 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ContactActivity"
-    android:focusableInTouchMode="true" >
+    tools:context=".ContactActivity" >
     
                 <LinearLayout
             android:focusable="true"
@@ -21,30 +20,29 @@
         android:background="@color/navbar_background" >
 
         <ImageButton
-            android:id="@+id/imageButtonList"
+            android:id="@+id/imageButtonSettings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="20dp"
-            android:layout_toLeftOf="@+id/imageButtonMap"
-            android:src="@drawable/contactlisticon" />
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/settings" />
 
         <ImageButton
             android:id="@+id/imageButtonMap"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
             android:src="@drawable/mapicon" />
 
         <ImageButton
-            android:id="@+id/imageButtonSettings"
+            android:id="@+id/imageButtonList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
-            android:layout_toRightOf="@+id/imageButtonMap"
-            android:src="@drawable/settingsicon" />
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/contactlisticon" />
+
     </RelativeLayout>
 
     <RelativeLayout
@@ -78,9 +76,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/toolbar"
-        android:focusableInTouchMode="false"
-        android:layout_above="@+id/navbar" 
-        android:background="@color/dataentry_background" >
+        android:layout_above="@+id/navbar" >
+        
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
@@ -97,6 +94,16 @@
                 android:layout_marginTop="5dp"
                 android:text="Contact:"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
+            
+            <ImageButton
+			    android:id="@+id/imageContact"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentRight="true"
+			    android:layout_marginRight="10sp" 
+			    android:layout_alignTop="@+id/textContact"
+			    android:src="@drawable/photoicon" />
+            
 
             <EditText
                 android:id="@+id/editName"
@@ -107,6 +114,7 @@
                 android:layout_below="@+id/textContact"
                 android:ems="14"
                 android:imeOptions="actionNext"
+                android:layout_toLeftOf="@+id/imageContact"
                 android:inputType="textCapWords" >
 
             </EditText>
