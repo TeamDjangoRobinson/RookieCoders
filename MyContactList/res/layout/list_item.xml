@@ -13,14 +13,47 @@
             android:layout_alignParentLeft="true" 
             android:id="@+id/textContactName"/>
         
+        <TextView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" 
+            android:layout_marginLeft="15sp"
+            android:textAppearance="?android:attr/textAppearanceMedium" 
+            android:layout_below="@+id/textContactName"
+            android:text="Home: " />
+        
         <TextView android:layout_height="wrap_content" 
             android:layout_width="wrap_content" 
-            android:textAppearance="?android:attr/textAppearanceMedium" 
+            android:textAppearance="?android:attr/textAppearanceSmall" 
             android:text="Phone Number" 
-            android:layout_marginLeft="15sp" 
-            android:layout_alignParentLeft="true" 
+            android:layout_marginLeft="5sp" 
+            android:layout_alignBaseline="@+id/home"
+            android:layout_alignBottom="@+id/home"
+            android:layout_toRightOf="@+id/home" 
             android:id="@+id/textPhoneNumber" 
             android:layout_below="@+id/textContactName"/>
+        
+        <TextView
+            android:id="@+id/cell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/textPhoneNumber"
+            android:layout_marginLeft="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" 
+            android:layout_below="@+id/textContactName"
+            android:text="Cell: " />
+
+        <TextView
+            android:id="@+id/textCellNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/cell"
+            android:layout_alignBottom="@+id/cell"
+            android:layout_marginLeft="5sp"
+            android:layout_toRightOf="@+id/cell"
+            android:text="Cell Number"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
         
         <Button android:layout_height="wrap_content" 
             android:layout_width="wrap_content" 
@@ -29,13 +62,66 @@
             android:id="@+id/buttonDeleteContact" 
             android:focusableInTouchMode="false" 
             android:focusable="false" 
-            android:visibility="invisible" 
+            android:visibility="visible" 
             android:background="@color/system_white" 
             android:layout_alignParentTop="true" 
             android:layout_marginTop="10dp"
             android:layout_alignParentRight="true" 
             android:layout_marginRight="10dp" 
             style="?android:attr/buttonStyleSmall"/>
+
+        <TextView
+            android:id="@+id/textAddressConstant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/home"
+            android:layout_below="@+id/buttonDeleteContact"
+            android:text="Address: "
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textAddressDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textAddressConstant"
+            android:layout_alignBottom="@+id/textAddressConstant"
+            android:layout_toRightOf="@+id/textAddressConstant"
+            android:layout_marginLeft="5sp"
+            android:text="Address"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/textCityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textAddressDetail"
+            android:layout_alignBottom="@+id/textAddressDetail"
+            android:layout_toRightOf="@+id/textAddressDetail"
+            android:layout_marginLeft="5sp"
+            android:text="City"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/textStateName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textCityName"
+            android:layout_alignBottom="@+id/textCityName"
+            android:layout_toRightOf="@+id/textCityName"
+            android:layout_marginLeft="5sp"
+            android:text="State"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/textZipCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textStateName"
+            android:layout_alignBottom="@+id/textStateName"
+            android:layout_toRightOf="@+id/textStateName"
+            android:layout_marginLeft="5sp"
+            android:text="Zip"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
     </RelativeLayout>
 
 

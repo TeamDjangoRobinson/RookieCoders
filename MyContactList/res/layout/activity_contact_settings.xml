@@ -38,6 +38,22 @@
             android:src="@drawable/contactlisticon" />
 
     </RelativeLayout>
+    
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/navbar" >
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+        	android:layout_alignParentTop="true"
+        	android:layout_alignParentBottom="true"
+            android:layout_above="@+id/navbar"  >
 
     <TextView
         android:id="@+id/textView1"
@@ -110,5 +126,47 @@
             android:layout_height="wrap_content"
             android:text="Descending" />
     </RadioGroup>
+    
+    <TextView
+        		android:id="@+id/textView3"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignParentLeft="true"
+        		android:layout_below="@+id/radioGroup2"
+        		android:layout_marginLeft="15dp"
+        		android:layout_marginTop="15dp"
+        		android:text="Color:" 
+        		android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/textView3">
+
+                <RadioButton
+                    android:id="@+id/radioLavender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Lavender" />
+
+                <RadioButton
+                    android:id="@+id/radioLightGrey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Light Grey" />
+
+                <RadioButton
+                    android:id="@+id/radioLightGreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Light Green" />
+            </RadioGroup>
+            
+            </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>

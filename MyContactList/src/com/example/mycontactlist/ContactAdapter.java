@@ -1,7 +1,6 @@
 package com.example.mycontactlist;
 
 import java.util.ArrayList;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,10 +34,37 @@ public class ContactAdapter extends ArrayAdapter<Contact> {
 
             TextView contactName = (TextView) v.findViewById(R.id.textContactName);
             TextView contactNumber = (TextView) v.findViewById(R.id.textPhoneNumber);
+            TextView contactCellNumber = (TextView) v.findViewById(R.id.textCellNumber);
+            TextView contactAddress = (TextView) v.findViewById(R.id.textAddressDetail);
+            TextView contactCity = (TextView) v.findViewById(R.id.textCityName);
+            TextView contactState = (TextView) v.findViewById(R.id.textStateName);
+            TextView contactZip = (TextView) v.findViewById(R.id.textZipCode);
         	Button b = (Button) v.findViewById(R.id.buttonDeleteContact);
             	
-        	contactName.setText(contact.getContactName());
-        	contactNumber.setText(contact.getPhoneNumber());
+        	if (position%2==0) {
+        		contactName.setText(contact.getContactName());
+        		contactNumber.setText(contact.getPhoneNumber());
+        		contactCellNumber.setText(contact.getCellNumber());
+        		contactAddress.setText(contact.getStreetAddress());
+        		contactCity.setText(contact.getCity());
+        		contactState.setText(contact.getState());
+        		contactZip.setText(contact.getZipCode());
+        		contactName.setTextColor(0xffff0000);
+        		//contactNumber.setTextColor(0xffff0000); 
+        		
+        	}
+        	else {
+        		contactName.setText(contact.getContactName());
+        		contactNumber.setText(contact.getPhoneNumber());
+        		contactCellNumber.setText(contact.getCellNumber());
+        		contactAddress.setText(contact.getStreetAddress());
+        		contactCity.setText(contact.getCity());
+        		contactState.setText(contact.getState());
+        		contactZip.setText(contact.getZipCode());
+        		contactName.setTextColor(0xff0000ff);
+        		//contactNumber.setTextColor(0xff0000ff);
+        		
+        	}
             b.setVisibility(View.INVISIBLE);
     	}
     	catch (Exception e) {

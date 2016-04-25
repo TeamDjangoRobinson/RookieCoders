@@ -451,7 +451,7 @@ public class ContactActivity extends FragmentActivity implements SaveDateListene
 		if (requestCode == CAMERA_REQUEST) {
 			if (resultCode == RESULT_OK) {
 				Bitmap photo = (Bitmap) data.getExtras().get("data");
-				Bitmap scaledPhoto = Bitmap.createScaledBitmap(photo, 72, 72, true);
+				Bitmap scaledPhoto = Bitmap.createScaledBitmap(photo, 150, 150, true);
 				ImageButton imageContact = (ImageButton) findViewById(R.id.imageContact);
 				imageContact.setImageBitmap(scaledPhoto);
 				currentContact.setPicture(scaledPhoto);

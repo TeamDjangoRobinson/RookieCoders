@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
 public class ContactSettingsActivity extends Activity {
@@ -24,6 +25,7 @@ public class ContactSettingsActivity extends Activity {
 		initListButton();
 		initMapButton();
 		initSettingsButton();
+		initChooseColorClick();
 	}
 
 	@Override
@@ -36,6 +38,7 @@ public class ContactSettingsActivity extends Activity {
 	private void initSettings() {
 		String sortBy = getSharedPreferences("MyContactListPreferences", Context.MODE_PRIVATE).getString("sortfield", "contactname");
 		String sortOrder = getSharedPreferences("MyContactListPreferences", Context.MODE_PRIVATE).getString("sortorder", "ASC");
+		String chooseColor = getSharedPreferences("MyContactListPreferences", Context.MODE_PRIVATE).getString("choosecolor", "Lavender");
 
 		RadioButton rbName = (RadioButton) findViewById(R.id.radioName);
 		RadioButton rbCity = (RadioButton) findViewById(R.id.radioCity);
@@ -57,7 +60,26 @@ public class ContactSettingsActivity extends Activity {
 		}
 		else {
 			rbDescending.setChecked(true);
-		}			
+		}
+		
+		ScrollView s = (ScrollView) findViewById(R.id.scrollView1);
+		
+		
+		RadioButton rbLavender = (RadioButton) findViewById(R.id.radioLavender);
+		RadioButton rbLightGrey = (RadioButton) findViewById(R.id.radioLightGrey);
+		RadioButton rbLightGreen = (RadioButton) findViewById(R.id.radioLightGreen);
+		if (chooseColor.equalsIgnoreCase("Lavender")) {
+			rbLavender.setChecked(true);
+			s.setBackgroundResource(R.color.lavender);
+		}
+		else if (chooseColor.equalsIgnoreCase("LightGrey")){
+			rbLightGrey.setChecked(true);
+			s.setBackgroundResource(R.color.lightgrey);
+		}
+		else {
+			rbLightGreen.setChecked(true);
+			s.setBackgroundResource(R.color.lightgreen);
+		}
 	}
 	
 	private void initSortByClick() {
@@ -94,6 +116,27 @@ public class ContactSettingsActivity extends Activity {
 				else {
 					getSharedPreferences("MyContactListPreferences", Context.MODE_PRIVATE).edit().putString("sortorder", "DESC").commit();
 				}			
+			}		
+		});
+	}
+	
+	private void initChooseColorClick() {
+		RadioGroup rgChooseColor = (RadioGroup) findViewById(R.id.radioGroup3);
+		rgChooseColor.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+
+			@Override
+			public void onCheckedChanged(RadioGroup arg0, int arg1) {
+				RadioButton rbLavender = (RadioButton) findViewById(R.id.radioLavender);
+				RadioButton rbLightGrey = (RadioButton) findViewById(R.id.radioLightGrey);
+				if (rbLavender.isChecked()) {
+					getSharedPreferences("MyContactListPreferences", Context.MODE_PRIVATE).edit().putString("choosecolor", "Lavender").commit();
+				}
+				else if (rbLightGrey.isChecked()){
+					getSharedPreferences("MyContactListPreferences", Context.MODE_PRIVATE).edit().putString("choosecolor", "LightGrey").commit();
+				}
+				else {
+					getSharedPreferences("MyContactListPreferences", Context.MODE_PRIVATE).edit().putString("choosecolor", "LightGreen").commit();
+				}
 			}		
 		});
 	}
