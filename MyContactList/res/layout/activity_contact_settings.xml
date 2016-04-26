@@ -17,7 +17,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
-            android:src="@drawable/settings" />
+            android:src="@drawable/settings"
+            android:background="@color/button_background" />
 
         <ImageButton
             android:id="@+id/imageButtonMap"
@@ -25,7 +26,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/mapicon" />
+            android:src="@drawable/mapicon"
+            android:background="@color/button_background" />
 
         <ImageButton
             android:id="@+id/imageButtonList"
@@ -33,9 +35,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:maxHeight="72dp"
-            android:maxWidth="72dp"
-            android:src="@drawable/contactlisticon" />
+            android:src="@drawable/contactlisticon"
+            android:background="@color/button_background" />
 
     </RelativeLayout>
     
@@ -99,9 +100,9 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/radioGroup2"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_marginBottom="34dp"
+        android:layout_below="@+id/radioGroup1"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="35dp"
         android:text="Sort Order:"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -109,9 +110,9 @@
         android:id="@+id/radioGroup2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/navbar"
-        android:layout_alignLeft="@+id/radioGroup1"
-        android:layout_marginBottom="74dp" >
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textView2" >
 
         <RadioButton
             android:id="@+id/radioAscending"
@@ -131,10 +132,9 @@
         		android:id="@+id/textView3"
         		android:layout_width="wrap_content"
         		android:layout_height="wrap_content"
-        		android:layout_alignParentLeft="true"
         		android:layout_below="@+id/radioGroup2"
-        		android:layout_marginLeft="15dp"
-        		android:layout_marginTop="15dp"
+        		android:layout_marginTop="35dp"
+        		android:layout_marginLeft="35dp"
         		android:text="Color:" 
         		android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -142,7 +142,7 @@
                 android:id="@+id/radioGroup3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="35dp"
+                android:layout_marginLeft="55dp"
                 android:layout_marginTop="10dp"
                 android:layout_below="@+id/textView3">
 

@@ -9,4 +9,5 @@
     <color name="lavender">#BDA0CB</color>
     <color name="lightgrey">#D3D3D3</color>
     <color name="lightgreen">#98FB98</color>
+    <color name="button_background">#0000</color>
 </resources>

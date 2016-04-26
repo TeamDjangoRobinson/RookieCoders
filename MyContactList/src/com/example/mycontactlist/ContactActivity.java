@@ -46,7 +46,7 @@ public class ContactActivity extends FragmentActivity implements SaveDateListene
         initChangeDateButton();
         initTextChangedEvents();
         initSaveButton();
-        initCallFunction();
+        initSMSFunction();
         initImageButton();
         
 		Bundle extras = getIntent().getExtras();
@@ -405,32 +405,22 @@ public class ContactActivity extends FragmentActivity implements SaveDateListene
 		birthDay.setText(DateFormat.format("MM/dd/yyyy", selectedTime.toMillis(false)).toString());		
 	}
     
-	private void initCallFunction() {
-	    EditText editPhone = (EditText) findViewById(R.id.editHome);
-	    editPhone.setOnLongClickListener(new OnLongClickListener() {
-
-	        @Override
-	        public boolean onLongClick(View arg0) {
-	            callContact(currentContact.getPhoneNumber());
-	            return false;
-	        }
-	    });
-
-	    EditText editCell = (EditText) findViewById(R.id.editCell);
+	private void initSMSFunction() {	
+		EditText editCell = (EditText) findViewById(R.id.editCell);	
 	    editCell.setOnLongClickListener(new OnLongClickListener() {
 
 	        @Override
 	        public boolean onLongClick(View arg0) {
-	            callContact(currentContact.getCellNumber());
-	            return false;
+	            textContact(currentContact.getCellNumber());
+	            return false;						
 	        }
 	    });
 	}
 	
-	private void callContact(String phoneNumber) {
-	    Intent intent = new Intent(Intent.ACTION_CALL);
-	    intent.setData(Uri.parse("tel:" + phoneNumber));
-	    startActivity(intent);
+	private void textContact(String cellNumber){
+		Intent intent = new Intent(Intent.ACTION_SENDTO);   
+		intent.setData(Uri.parse("sms:" + cellNumber));
+		startActivity(intent);
 	}
 
 	private void initImageButton() {

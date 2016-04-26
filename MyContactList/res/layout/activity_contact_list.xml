@@ -57,7 +57,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
-            android:src="@drawable/settings" />
+            android:src="@drawable/settings"
+            android:background="@color/button_background" />
 
         <ImageButton
             android:id="@+id/imageButtonMap"
@@ -65,7 +66,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/mapicon" />
+            android:src="@drawable/mapicon"
+            android:background="@color/button_background" />
 
         <ImageButton
             android:id="@+id/imageButtonList"
@@ -73,7 +75,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:src="@drawable/contactlisticon" />
+            android:src="@drawable/contactlisticon"
+            android:background="@color/button_background" />
 
     </RelativeLayout>
 
